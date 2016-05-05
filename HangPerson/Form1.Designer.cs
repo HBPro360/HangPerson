@@ -41,6 +41,11 @@
             this.pbHangTen = new System.Windows.Forms.PictureBox();
             this.btnNextImage = new System.Windows.Forms.Button();
             this.flpLetters = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblReveal = new System.Windows.Forms.Label();
+            this.lblWinName = new System.Windows.Forms.Label();
+            this.lblLossesName = new System.Windows.Forms.Label();
+            this.lblWin = new System.Windows.Forms.Label();
+            this.lblLosses = new System.Windows.Forms.Label();
             this.mnuHangTen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHangTen)).BeginInit();
             this.SuspendLayout();
@@ -81,12 +86,13 @@
             this.mnuExit.Name = "mnuExit";
             this.mnuExit.Size = new System.Drawing.Size(122, 22);
             this.mnuExit.Text = "Exit";
+            this.mnuExit.Click += new System.EventHandler(this.mnuExit_Click);
             // 
             // btnGetWord
             // 
-            this.btnGetWord.Location = new System.Drawing.Point(256, 331);
+            this.btnGetWord.Location = new System.Drawing.Point(331, 459);
             this.btnGetWord.Name = "btnGetWord";
-            this.btnGetWord.Size = new System.Drawing.Size(75, 23);
+            this.btnGetWord.Size = new System.Drawing.Size(102, 40);
             this.btnGetWord.TabIndex = 1;
             this.btnGetWord.Text = "Get Word";
             this.btnGetWord.UseVisualStyleBackColor = true;
@@ -105,7 +111,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(124, 357);
+            this.label1.Location = new System.Drawing.Point(125, 376);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(127, 27);
             this.label1.TabIndex = 3;
@@ -115,7 +121,7 @@
             // 
             this.lblCText.AutoSize = true;
             this.lblCText.Font = new System.Drawing.Font("Showcard Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCText.Location = new System.Drawing.Point(261, 357);
+            this.lblCText.Location = new System.Drawing.Point(262, 376);
             this.lblCText.Name = "lblCText";
             this.lblCText.Size = new System.Drawing.Size(0, 27);
             this.lblCText.TabIndex = 3;
@@ -123,16 +129,16 @@
             // lblMask
             // 
             this.lblMask.AutoSize = true;
-            this.lblMask.Font = new System.Drawing.Font("Showcard Gothic", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMask.Location = new System.Drawing.Point(32, 261);
+            this.lblMask.Font = new System.Drawing.Font("Gill Sans Ultra Bold Condensed", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMask.Location = new System.Drawing.Point(278, 310);
             this.lblMask.Name = "lblMask";
-            this.lblMask.Size = new System.Drawing.Size(0, 50);
+            this.lblMask.Size = new System.Drawing.Size(0, 40);
             this.lblMask.TabIndex = 4;
             this.lblMask.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pbHangTen
             // 
-            this.pbHangTen.Location = new System.Drawing.Point(194, 62);
+            this.pbHangTen.Location = new System.Drawing.Point(130, 59);
             this.pbHangTen.Name = "pbHangTen";
             this.pbHangTen.Size = new System.Drawing.Size(210, 236);
             this.pbHangTen.TabIndex = 5;
@@ -140,7 +146,7 @@
             // 
             // btnNextImage
             // 
-            this.btnNextImage.Location = new System.Drawing.Point(366, 331);
+            this.btnNextImage.Location = new System.Drawing.Point(774, 331);
             this.btnNextImage.Name = "btnNextImage";
             this.btnNextImage.Size = new System.Drawing.Size(75, 23);
             this.btnNextImage.TabIndex = 6;
@@ -150,16 +156,75 @@
             // 
             // flpLetters
             // 
-            this.flpLetters.Location = new System.Drawing.Point(454, 62);
+            this.flpLetters.Location = new System.Drawing.Point(433, 123);
             this.flpLetters.Name = "flpLetters";
-            this.flpLetters.Size = new System.Drawing.Size(234, 236);
+            this.flpLetters.Size = new System.Drawing.Size(234, 172);
             this.flpLetters.TabIndex = 7;
+            // 
+            // lblReveal
+            // 
+            this.lblReveal.AutoSize = true;
+            this.lblReveal.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReveal.ForeColor = System.Drawing.Color.Blue;
+            this.lblReveal.Location = new System.Drawing.Point(384, 59);
+            this.lblReveal.Name = "lblReveal";
+            this.lblReveal.Size = new System.Drawing.Size(0, 33);
+            this.lblReveal.TabIndex = 8;
+            // 
+            // lblWinName
+            // 
+            this.lblWinName.AutoSize = true;
+            this.lblWinName.BackColor = System.Drawing.Color.Transparent;
+            this.lblWinName.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWinName.Location = new System.Drawing.Point(0, 59);
+            this.lblWinName.Name = "lblWinName";
+            this.lblWinName.Size = new System.Drawing.Size(53, 19);
+            this.lblWinName.TabIndex = 9;
+            this.lblWinName.Text = "Wins:";
+            // 
+            // lblLossesName
+            // 
+            this.lblLossesName.AutoSize = true;
+            this.lblLossesName.BackColor = System.Drawing.Color.Transparent;
+            this.lblLossesName.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLossesName.Location = new System.Drawing.Point(0, 100);
+            this.lblLossesName.Name = "lblLossesName";
+            this.lblLossesName.Size = new System.Drawing.Size(65, 19);
+            this.lblLossesName.TabIndex = 10;
+            this.lblLossesName.Text = "Losses:";
+            // 
+            // lblWin
+            // 
+            this.lblWin.AutoSize = true;
+            this.lblWin.BackColor = System.Drawing.Color.Transparent;
+            this.lblWin.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWin.Location = new System.Drawing.Point(15, 78);
+            this.lblWin.Name = "lblWin";
+            this.lblWin.Size = new System.Drawing.Size(20, 19);
+            this.lblWin.TabIndex = 11;
+            this.lblWin.Text = "0";
+            // 
+            // lblLosses
+            // 
+            this.lblLosses.AutoSize = true;
+            this.lblLosses.BackColor = System.Drawing.Color.Transparent;
+            this.lblLosses.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLosses.Location = new System.Drawing.Point(15, 119);
+            this.lblLosses.Name = "lblLosses";
+            this.lblLosses.Size = new System.Drawing.Size(20, 19);
+            this.lblLosses.TabIndex = 12;
+            this.lblLosses.Text = "0";
             // 
             // frmHangTen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(746, 424);
+            this.Controls.Add(this.lblLosses);
+            this.Controls.Add(this.lblWin);
+            this.Controls.Add(this.lblLossesName);
+            this.Controls.Add(this.lblWinName);
+            this.Controls.Add(this.lblReveal);
             this.Controls.Add(this.flpLetters);
             this.Controls.Add(this.btnNextImage);
             this.Controls.Add(this.pbHangTen);
@@ -169,6 +234,7 @@
             this.Controls.Add(this.lblWord);
             this.Controls.Add(this.btnGetWord);
             this.Controls.Add(this.mnuHangTen);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.mnuHangTen;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -199,6 +265,11 @@
         private System.Windows.Forms.PictureBox pbHangTen;
         private System.Windows.Forms.Button btnNextImage;
         private System.Windows.Forms.FlowLayoutPanel flpLetters;
+        private System.Windows.Forms.Label lblReveal;
+        private System.Windows.Forms.Label lblWinName;
+        private System.Windows.Forms.Label lblLossesName;
+        private System.Windows.Forms.Label lblWin;
+        private System.Windows.Forms.Label lblLosses;
     }
 }
 

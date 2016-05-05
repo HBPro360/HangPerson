@@ -25,6 +25,10 @@ namespace HangPerson
                 return _gameover;
             }
         }
+        //public int Reset
+        //{
+        //    set { _index = 0; }
+        //}
         #endregion
 
         #region  Private Methods 
@@ -42,15 +46,22 @@ namespace HangPerson
         #endregion
 
         #region  Public Methods 
+        public void Reset()
+        {
+            _index = 0;
+            _gameover = false;
+        }
+
         public Bitmap GetNext()
         {
-            if (_index == _List.Count)
+            if (_index == _List.Count - 1)
             {
-                _index = 0;
+                //_index = -1;
                 _gameover = true;
             }
             return _List[_index++];
         }
+
         #endregion
 
         #region  Public Events 
