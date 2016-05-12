@@ -106,6 +106,7 @@
             this.lblWord.Name = "lblWord";
             this.lblWord.Size = new System.Drawing.Size(0, 13);
             this.lblWord.TabIndex = 2;
+            this.lblWord.Visible = false;
             // 
             // label1
             // 

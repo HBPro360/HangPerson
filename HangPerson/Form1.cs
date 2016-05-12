@@ -17,6 +17,8 @@ namespace HangPerson
         Random random;
         Word word;
         HangTenImage images;
+        int wins = 0;// Corect This and losses
+        int losses = 0;
         public frmHangTen()
         {
             InitializeComponent();
@@ -88,8 +90,6 @@ namespace HangPerson
 
         private void Btn_Click(object sender, EventArgs e)
         {
-            int wins = 0;// Corect This and losses
-            int losses = 0;
             Button btn = sender as Button;
             btn.Enabled = false;
             //btn.Visible = false;
